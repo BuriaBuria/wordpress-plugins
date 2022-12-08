@@ -59,6 +59,7 @@ function show_post_in_modal( $atts ) {
 	    $post_title = $post_modal->post_title;
 	    $post_content = preg_replace('/\n/', '', $post_modal->post_content);
     }
+    ob_start();		
 	?>
 
     <script>
@@ -77,5 +78,6 @@ function show_post_in_modal( $atts ) {
     </button>
 
 	<?php
+	return ob_get_clean();
 }
 add_shortcode( 'modal_post', 'show_post_in_modal' );
