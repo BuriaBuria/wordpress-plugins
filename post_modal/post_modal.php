@@ -57,7 +57,7 @@ function show_post_in_modal( $atts ) {
 	    $post_content = 'No post';
     } else {
 	    $post_title = $post_modal->post_title;
-	    $post_content = preg_replace('/\n/', '', $post_modal->post_content);
+	    $post_content = preg_replace('/\n/', '', apply_filters( 'the_content', $post_modal->post_content ) );
     }
     ob_start();		
 	?>
