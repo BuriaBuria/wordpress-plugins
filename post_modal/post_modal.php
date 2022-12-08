@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       Post in modal window with REST (Bootstrap 5)
+ * Plugin Name:       Post in modal window (Bootstrap 5)
  * Plugin URI:        https://perelom.com
- * Description:       Shows post in a modal window with Bootstrap 5.0 and REST (without jquery)
+ * Description:       Shows post in a modal window with Bootstrap 5.0 (without jquery)
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
@@ -64,7 +64,7 @@ function show_post_in_modal( $atts ) {
 	?>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-           document.getElementById('postModal').addEventListener('show.bs.modal', modalShowPost)
+            document.getElementById('postModal').addEventListener('show.bs.modal', modalShowPost)
         } )
 
         function modalShowPost() {
@@ -78,6 +78,7 @@ function show_post_in_modal( $atts ) {
     </button>
 
 	<?php
+    
 	$output = ob_get_clean();
 	return $output;
 }
